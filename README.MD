@@ -2,17 +2,17 @@
 
 ## About
 
-**FastDrive** is a car rental management system project.  
+**FastDrive** is a car rental management system designed to connect users directly to the vehicles available for rental and meets the user's need to choose the appropriate car to rent on specific days.
 
 ## ERD
 
 ERD Tables
 
-![ERD](https://i.imgur.com/k6lsto2.jpeg)
+![ERD](https://i.imgur.com/dd6OR1B.jpeg)
 
 ## User Story
 
-The user should create account from **Sing Up Page**. Then the user should login.
+The user begins by creating an account from the **Sign Up page** for his first use. Then he is directed to the **Available Cars Page** to choose the appropriate car for him. After clicking on the appropriate car, the user is directed to the **Car Rental Page** to see the *price* and *description* of the car and see if the car is available on the required date or No, the user can request a car rental from this page. Upon request, the user will be directed to the ***thanks Page*** to be thanked for renting the car.
 
 ## Wireframe
 
@@ -26,9 +26,9 @@ The user should create account from **Sing Up Page**. Then the user should login
 ![Sign In Page](https://i.imgur.com/zAy3xw8.png)
 
 
-#### Main Page:
+#### Available Cars Page:
 
-![Main Page](https://i.imgur.com/MWlYxg5.png)
+![Available Cars Page](https://i.imgur.com/MWlYxg5.png)
 
 
 #### Car Rental Page:
