@@ -6,9 +6,22 @@
 
 ## ERD
 
-ERD Tables
+#### ERD Tables:
 
-![ERD](https://i.imgur.com/dd6OR1B.jpeg)
+
+User ERD:
+
+![User ERD](https://i.imgur.com/dd6OR1B.jpeg)
+
+Admin ERD:
+
+![Admin ERD](https://i.imgur.com/BvP66z7.jpeg)
+
+## Admin Story
+
+The admin can **Add**, **Delete** available for rent. He can also **Edit** data such as the **Name**, **Price**, **Image**, and **Status** of the car. This allows the admin to fully manage the site.
+
+
 
 ## User Story
 
