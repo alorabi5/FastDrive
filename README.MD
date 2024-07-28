@@ -6,16 +6,10 @@
 
 ## ERD
 
-#### ERD Tables:
+ERD Tables:
 
 
-User ERD:
-
-![User ERD](https://i.imgur.com/dd6OR1B.jpeg)
-
-Admin ERD:
-
-![Admin ERD](https://i.imgur.com/BvP66z7.jpeg)
+![ERD](https://i.imgur.com/BVhkLVR.jpeg)
 
 ## Admin Story
 
