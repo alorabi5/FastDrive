@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Car</title>
+</head>
+<body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add a New Car</h1>
+    <form action="/cars" method="POST">
+        <label for="name">Car Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="price">Price:</label>
+        <input type="number" min="0" step="any" name="price" id="price" required>
+        <button type="submit">Add Car</button>
+
+        <label for="status">Status:</label>
+        <input type="checkbox" name="status" id="status" required>
+
+        <label for="pickupDate">Pickup Date:</label>
+        <input type="date" name="pickupDate" id="pickupDate" required>
+
+        <label for="returnDate">Return Date:</label>
+        <input type="date" name="returnDate" id="returnDate" required>
+
+        <label for="imageUrl">Image URL:</label>
+        <input type="text" name="imageUrl" id="imageUrl" required>
+
+        <label for="imageAlt">Image ALT:</label>
+        <input type="text" name="imageAlt" id="imageAlt" required>
+
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" required>
+        <button type="submit">Add Car</button>
+    </form>
+</body>
+</html>
