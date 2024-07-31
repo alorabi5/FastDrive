@@ -36,7 +36,10 @@ router.post('/sign-up', async (req, res) => {
     req.body.password = hashedPassword;
   
     // All ready to create the new user!
-    await User.create(req.body);
+    req.body.isAdmin = false;
+    const newUser = await User.create(req.body);
+    console.log(newUser)
+
   
     res.redirect('/auth/sign-in');
   } catch (error) {
@@ -67,7 +70,8 @@ router.post('/sign-in', async (req, res) => {
     // If there is other data you want to save to `req.session.user`, do so here!
     req.session.user = {
       username: userInDatabase.username,
-      _id: userInDatabase._id
+      _id: userInDatabase,
+      isAdmin: userInDatabase.isAdmin
     };
   
     res.redirect('/');

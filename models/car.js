@@ -14,10 +14,10 @@ const carSchema = mongoose.Schema({
     // require: true
   },
   pickupDate: {
-    type: Date
+    type: Date,
   },
   returnDate: {
-    type: Date
+    type: Date,
   },
   imageUrl: {
     type: String,

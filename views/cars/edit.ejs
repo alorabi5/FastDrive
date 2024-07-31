@@ -21,6 +21,54 @@
         value="<%= car.name %>"
       >
       
+      <div>
+        <label for="price">Price:</label>
+        <input type="number" 
+        min="0" 
+        step="any" 
+        name="price" 
+        id="price"
+        value="<%= car.price %>"
+        required>
+    </div>
+
+    <div>
+        <label for="status">Status:</label>
+        <input type="checkbox" name="status" id="status" 
+        <%if(car.status) {%>checked<%}%>>
+    </div>
+
+    <!-- car.pickupDate.toLocalDateString() -->
+    <!-- value = car.pickupDate.toISOString().slice(0, 10) -->
+    <!-- <div>
+    <label for="pickupDate">Pickup Date:</label>
+    <input type="date" name="pickupDate" id="pickupDate" 
+    value="<%= car.pickupDate  %>">
+    </div>
+
+    <div>
+        <label for="returnDate">Return Date:</label>
+        <input type="date" name="returnDate" id="returnDate"
+        value="<%= car.returnDate %>">
+    </div> -->
+
+    <div>
+        <label for="imageUrl">Image URL:</label>
+        <input type="text" name="imageUrl" id="imageUrl" 
+        value="<%= car.imageUrl %>" required>
+    </div>
+
+    <div>
+        <label for="imageAlt">Image ALT:</label>
+        <input type="text" name="imageAlt" id="imageAlt" 
+        value="<%= car.imageAlt %>" required>
+    </div>
+
+    <div>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" required><%= car.description %></textarea>
+    </div>
+      
       <button type="submit">Update Car</button>
     </form>
 </body>

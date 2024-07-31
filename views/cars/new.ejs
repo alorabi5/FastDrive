@@ -9,30 +9,46 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a New Car</h1>
     <form action="/cars" method="POST">
-        <label for="name">Car Name:</label>
-        <input type="text" name="name" id="name" required>
+        <div>
+            <label for="name">Car Name:</label>
+            <input type="text" name="name" id="name" required>
+        </div>
 
-        <label for="price">Price:</label>
-        <input type="number" min="0" step="any" name="price" id="price" required>
-        <button type="submit">Add Car</button>
+        <div>
+            <label for="price">Price:</label>
+            <input type="number" min="0" step="any" name="price" id="price" required>
+        </div>
 
-        <label for="status">Status:</label>
-        <input type="checkbox" name="status" id="status" required>
+        <div>
+            <label for="status">Status:</label>
+            <input type="checkbox" name="status" id="status">
+        </div>
 
-        <label for="pickupDate">Pickup Date:</label>
-        <input type="date" name="pickupDate" id="pickupDate" required>
+        <div>
+            <label for="imageUrl">Image URL:</label>
+            <input type="text" name="imageUrl" id="imageUrl" required>
+        </div>
 
-        <label for="returnDate">Return Date:</label>
-        <input type="date" name="returnDate" id="returnDate" required>
+        <div>
+            <label for="imageAlt">Image ALT:</label>
+            <input type="text" name="imageAlt" id="imageAlt" required>
+        </div>
 
-        <label for="imageUrl">Image URL:</label>
-        <input type="text" name="imageUrl" id="imageUrl" required>
+        <div>
+            <label for="pickupDate">Pickup Date:</label>
+            <input type="date" name="pickupDate" id="pickupDate" >
+        </div>
+      
+            <div>
+                <label for="returnDate">Return Date:</label>
+                <input type="date" name="returnDate" id="returnDate" >
+        </div>
 
-        <label for="imageAlt">Image ALT:</label>
-        <input type="text" name="imageAlt" id="imageAlt" required>
+        <div>
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" required></textarea>
+        </div>
 
-        <label for="description">Description:</label>
-        <input type="text" name="description" id="description" required>
         <button type="submit">Add Car</button>
     </form>
 </body>

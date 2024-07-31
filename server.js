@@ -10,6 +10,7 @@ const path = require('path');
 
 const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
+const isAdmin = require('./middleware/is-admin.js');
 
 // CONTROLLERS
 const carsController = require('./controllers/cars.js');
@@ -47,8 +48,9 @@ app.get('/', (req, res) => {
 
 
 app.use('/auth', authController);
-app.use(isSignedIn)
-app.use('/cars', carsController)
+app.use(isSignedIn);
+app.use('/cars', carsController);
+// app.use(isAdmin);
 
 app.listen(port, () => {
   console.log(`The express app is ready on port ${port}!`);

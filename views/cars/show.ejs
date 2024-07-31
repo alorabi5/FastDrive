@@ -8,7 +8,44 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= car.name %></h1>
+    <img src="<%= car.imageUrl %>" alt="<%= car.imageAlt %>">
+    <h2><%= car.name %></h2>
+    <p>Price: <%= car.price %> BD (Pre Day)</p>
+    <p>Status: <%= car.status? 'Available': 'Not Available' %></p>
+    <p>Description: <%= car.description %></p>
+
+    <p id="total">Total Price: </p>
+
+    <%
+
+      // let Difference_In_Time =
+      // returnDate.getTime() - today.getTime();
+
+      const dateFormate = (date) => {
+        return date.toISOString().split('T')[0].replace(/-/g, '-');
+      }
+
+
+      
+    %>
+
+    
+
+    <% if (car.status) { %>
+      <form action="/cars/<%= car._id %>" method="post">
+        <div>
+          <label for="pickupDate">Pickup Date:</label>
+          <input type="date" name="pickupDate" id="pickupDate" min="<%=dateFormate(new Date())%>"  required>
+          </div>
+    
+          <div>
+              <label for="returnDate">Return Date:</label>
+              <input type="date" name="returnDate" id="returnDate" min="<%= dateFormate(new Date())%>"  required>
+          </div>
+    <button type="submit">Rent Car</button>
+    </form>
+    <% } %>
+    
 
 
     <a href="/cars/<%= car._id %>/edit">Edit this Car</a>
@@ -19,5 +56,6 @@
       <button type="submit">Delete this Car</button>
     </form>
 
+    
   </body>
 </html>
