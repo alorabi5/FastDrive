@@ -11,7 +11,9 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Rent Your Car <span id="driveText">Now!</span></h1>
     <div id="linkBtn">
+      <% if(user.isAdmin) {%>
       <a href="/cars/new">Add a New Car</a>
+      <% } %>
     </div>
     <div id="allCar">
       <% if (carsEl.length > 0) { %>

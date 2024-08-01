@@ -39,8 +39,11 @@ form button{
     margin-bottom: 0px;
     background-color: #1b2326;
     border: 0;
-    width: 120px;
+    /* width: 130px; */
+    /* height: 40px; */
     height: 40px;
+    width: 180px;
+    padding: 0 20px;
     border-radius: 20px;
     font-size: 16px;
     font-weight: bold;
@@ -210,3 +213,64 @@ nav img{
 #message{
     margin: auto;
 }
+
+#showBody{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 90%;
+    height: 50vh;
+    margin: auto;
+}
+
+#showImgDiv{
+    margin: auto;
+    height: 100%;
+    width: 40%;
+    background-color: red;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#showImgDiv img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+
+#showBody form{
+    height: 100%;
+    width: 0;
+    padding: 0;
+    
+    
+    
+
+}
+
+#showAdminBtns{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+#showDetaiLDiv{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: justify;
+}
+
+#showRentDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+
+
+
