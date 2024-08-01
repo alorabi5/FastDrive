@@ -1,14 +1,24 @@
 <nav>
+  
+  <img src="https://i.imgur.com/Qgq8c1e.png" alt="FastDrive Logo">
     <% if (user) { %>
+      <div class="navEl" id="homeNav">
     <a href="/">Home</a>
-    <a href="/cars">All Cars</a>
-    <a href="/auth/sign-out">Sign Out</a>
+    <a href="/cars">Explore Cars</a>
+  </div>
+  <div class="navEl" id="authNav">
+  <a href="/auth/sign-out">Sign Out</a>
+</div>  
   
     <% } else { %>
-  
+    
+  <div class="navEl" id="authNav">
+    <a href="/">Home</a>
     <a href="/auth/sign-in">Sign In</a>
     <a href="/auth/sign-up">Sign Up</a>
+  </div>
   
     <% } %>
+    
   </nav>
   

@@ -3,29 +3,45 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="icon" href="https://i.imgur.com/iuVlN0k.png">
     <title>All Cars</title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>All Cars</h1>
-    <div>
+    <h1>Rent Your Car <span id="driveText">Now!</span></h1>
+    <div id="linkBtn">
+      <a href="/cars/new">Add a New Car</a>
+    </div>
+    <div id="allCar">
       <% if (carsEl.length > 0) { %>
-        <ul>
+        
           <% carsEl.forEach(car => { %>
-            <li>
+            <a class="carLink" href="/cars/<%= car._id %>">
+            <div class="carDiv">
+              <div class="carImage">
+                <img src="<%= car.imageUrl %>" alt="<%= car.imageAlt %>">
+              </div>
               
-              <a href="/cars/<%= car._id %>">
-
-
-                <%= car.name %>
-              </a>
-            </li>
+              <div class="carDetail">
+                <div class="carDetailNS">
+                  <div>
+                <h4><%= car.name %></h4>
+              </div> <div>
+                <p><%= car.status? 'Available': 'Not Available' %></p>
+              </div>
+              </div>
+                <p id="carPrice"><%= car.price %> BD (Pre Day)</p>
+              </div>
+              
+            </div>
+          </a>
           <% }); %>
-        </ul>
+        
       <% } else { %>
         <p>There are no cars.</p>
       <% } %>
     </div>
-    <a href="/cars/new">Add a New Car</a>
+    
   </body>
 </html>

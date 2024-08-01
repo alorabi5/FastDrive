@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="icon" href="https://i.imgur.com/iuVlN0k.png">
     <title>Editing <%= car.name %></title>
 </head>
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Edit <%= car.name %></h1>
+    
     <form 
       action="/cars/<%= car._id %>?_method=PUT"
       method="POST"
+      id="carForm"
     >
-      <label for="name">Name:</label>
+    <h1>Edit <%= car.name %></h1>
+      
+      <div class="carInputs">
+        <label for="name">Name:</label>
       <input 
         type="text" 
         name="name" 
         id="name" 
         value="<%= car.name %>"
-      >
+      > </div>
       
-      <div>
+      <div class="carInputs">
         <label for="price">Price:</label>
         <input type="number" 
         min="0" 
@@ -32,7 +37,7 @@
         required>
     </div>
 
-    <div>
+    <div class="carInputs">
         <label for="status">Status:</label>
         <input type="checkbox" name="status" id="status" 
         <%if(car.status) {%>checked<%}%>>
@@ -52,19 +57,19 @@
         value="<%= car.returnDate %>">
     </div> -->
 
-    <div>
+    <div class="carInputs">
         <label for="imageUrl">Image URL:</label>
         <input type="text" name="imageUrl" id="imageUrl" 
         value="<%= car.imageUrl %>" required>
     </div>
 
-    <div>
+    <div class="carInputs">
         <label for="imageAlt">Image ALT:</label>
         <input type="text" name="imageAlt" id="imageAlt" 
         value="<%= car.imageAlt %>" required>
     </div>
 
-    <div>
+    <div class="carInputs">
         <label for="description">Description:</label>
         <textarea name="description" id="description" required><%= car.description %></textarea>
     </div>

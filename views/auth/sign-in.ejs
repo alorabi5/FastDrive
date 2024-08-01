@@ -3,16 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="icon" href="https://i.imgur.com/iuVlN0k.png">
     <title>Sign In</title>
   </head>
   <body>
-    <h1>Sign in</h1>
+    <%- include('../partials/_navbar.ejs') %>
     <form action="/auth/sign-in" method="POST">
-      <label for="username">Username:</label>
+      <h1>Sign In</h1>
+      <div id="inputFormDiv">
+      <label for="username">Username</label>
       <input type="text" name="username" id="username" />
-      <label for="password">Password:</label>
+      <label for="password">Password</label>
       <input type="password" name="password" id="password" />
-      <button type="submit">Sign in</button>
+    </div> <div id="btnFormDiv">
+      <button type="submit">Sign In</button>
+    </div>
     </form>
   </body>
 </html>

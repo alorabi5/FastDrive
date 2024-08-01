@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="icon" href="https://i.imgur.com/iuVlN0k.png">
     <title><%= car.name %></title>
   </head>
   <body>
@@ -46,15 +47,17 @@
     </form>
     <% } %>
     
-
-
+    <%if(currentUser.isAdmin){ %>
+    <div id="linkBtn">
     <a href="/cars/<%= car._id %>/edit">Edit this Car</a>
+  </div>
 
     <form
       action="/cars/<%= car._id %>?_method=DELETE"
       method="post">
       <button type="submit">Delete this Car</button>
     </form>
+    <% } %>
 
     
   </body>

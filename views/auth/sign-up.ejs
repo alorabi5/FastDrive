@@ -3,12 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="icon" href="https://i.imgur.com/iuVlN0k.png">
     <title>Sign Up</title>
   </head>
   <body>
-    <h1>Create a new account!</h1>
+    <%- include('../partials/_navbar.ejs') %>
+    
     <form action="/auth/sign-up" method="POST">
-
+      <h1>Sign Up</h1>
+      <div id="inputFormDiv">
       <!-- Username -->
       <label for="username">Username:</label>
       <input type="text" name="username" id="username" />
@@ -20,8 +24,10 @@
       <!-- Confirm -->
       <label for="confirmPassword">Confirm Password:</label>
       <input type="password" name="confirmPassword" id="confirmPassword" />
+    </div> <div id="btnFormDiv">
 
-      <button type="submit">Sign up</button>
+      <button type="submit">Sign Up</button>
+    </div>
     </form>
   </body>
 </html>
