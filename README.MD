@@ -4,6 +4,17 @@
 
 **FastDrive** is a car rental management system designed to connect users directly to the vehicles available for rental and meets the user's need to choose the appropriate car to rent on specific days.
 
+[Deployed Link](https://fast-drive-a329d66a65ab.herokuapp.com)
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Express
+- MongoDB
+- EJS
+
 ## ERD
 
 ERD Tables:
@@ -45,3 +56,11 @@ The user begins by creating an account from the **Sign Up page** for his first u
 #### Thanks Page:
 
 ![Thanks Page](https://i.imgur.com/7hUSMel.png)
+
+## Future Plan
+
+In the future, I may add rental offices so that the user can browse the rental offices and search for the cars in this office.
+
+## External Resources
+
+Logo Created by [Canva](https://canva.com)
